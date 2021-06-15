@@ -7,5 +7,29 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.kerubyte.retropunk.ui.fragment.title.TitleFragment"
-        android:label="TitleFragment" />
+        android:label="TitleFragment" >
+        <action
+            android:id="@+id/action_titleFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.kerubyte.retropunk.ui.fragment.detail.DetailFragment"
+        android:label="DetailFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.kerubyte.retropunk.ui.fragment.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.kerubyte.retropunk.ui.fragment.favourites.FavouritesFragment"
+        android:label="FavouritesFragment" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 </navigation>
