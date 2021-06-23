@@ -2,6 +2,8 @@ package com.kerubyte.retropunk.infrastructure.di
 
 import com.kerubyte.retropunk.application.util.Constants
 import com.kerubyte.retropunk.data.api.BeerService
+import com.kerubyte.retropunk.data.api.BeerServiceHelper
+import com.kerubyte.retropunk.data.api.BeerServiceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -36,4 +38,8 @@ class RetrofitModule {
 
     @Provides
     fun provideBeerService(retrofit: Retrofit) = retrofit.create(BeerService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideBeerHelper(beerServiceHelper: BeerServiceImpl): BeerServiceHelper = beerServiceHelper
 }
