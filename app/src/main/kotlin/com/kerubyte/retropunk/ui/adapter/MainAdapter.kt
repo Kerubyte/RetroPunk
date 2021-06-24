@@ -24,7 +24,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
             )
         )
     }
-    
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val product = differ.currentList[position]
         holder.itemView.apply {
